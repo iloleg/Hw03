@@ -1,6 +1,9 @@
 Примеры кода
+
 Пример 1
+
 До 
+
 var _FolderLabelPrinter = ConfigurationManager.AppSettings["LabelPrintelFileLocation"];
 var _LabelLocationPrinterFile = ConfigurationManager.AppSettings["LabelLocationName"];
 var LocationLabelFile = @"" + _FolderLabelPrinter + @"\" + _LabelLocationPrinterFile;
