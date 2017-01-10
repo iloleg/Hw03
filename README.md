@@ -1,8 +1,8 @@
-Примеры кода
+#Примеры кода
 
-Пример 1
+#Пример 1
 
-До 
+#До 
 
 var _FolderLabelPrinter = ConfigurationManager.AppSettings["LabelPrintelFileLocation"];
 var _LabelLocationPrinterFile = ConfigurationManager.AppSettings["LabelLocationName"];
@@ -26,7 +26,7 @@ var LocationLabelFile = @"" + _FolderLabelPrinter + @"\" + _LabelLocationPrinter
                 
 
 
-После 
+#После 
 
 try
             {
@@ -44,8 +44,8 @@ try
 
                 }
 
-Пример 2
-До 
+#Пример 2
+#До 
 
 public static string ImageToByte(FileStream fs)
             {
@@ -56,7 +56,7 @@ public static string ImageToByte(FileStream fs)
                 return encodeData;
             }
 
-После 
+#После 
 public static string ImageToByte(FileStream fs)
             {
                 fs.Read(new byte[fs.Length], 0, Convert.ToInt32(fs.Length));
@@ -64,8 +64,8 @@ public static string ImageToByte(FileStream fs)
                 return Convert.ToBase64String(new byte[fs.Length], Base64FormattingOptions.InsertLineBreaks);
             }
 
-Пример 3
-До 
+#Пример 3
+#До 
 
 public static ImageSource ByteToImage(byte[] imageData)
             {
@@ -80,7 +80,7 @@ public static ImageSource ByteToImage(byte[] imageData)
                 return imgSrc;
             }
 
-После 
+#После 
 
 public static ImageSource ByteToImage(byte[] imageData)
             {
@@ -98,9 +98,9 @@ public static ImageSource ByteToImage(byte[] imageData)
 
 
 
-Группы данных
-Проблема
-У нас есть фрагмент кода, который можно сгруппировать.
+#Группы данных
+#Проблема
+#У нас есть фрагмент кода, который можно сгруппировать.
 
 void PrintOwing() 
 {
@@ -111,8 +111,8 @@ void PrintOwing() 
   Console.WriteLine("amount: " + GetOutstanding());
 }
 
-Решение!
-метод вместо
+#Решение!
+#метод вместо
 void PrintOwing()
 {
   PrintBanner();
@@ -125,10 +125,10 @@ void PrintDetails(double outstanding)
   Console.WriteLine("amount: " + outstanding);
 }
 
-Одержимость элементарными типами
+#Одержимость элементарными типами
 
-Проблема
-У нас  есть массив, в котором хранятся разнотипные данные.
+#Проблема
+#У нас  есть массив, в котором хранятся разнотипные данные.
 string[] row = new string[2];
 row[0] = "Liverpool";
 row[1] = "15";
@@ -138,15 +138,15 @@ row.SetName("Liverpool");
 row.SetWins("15");
 
 
-Длинный список параметров
+#Длинный список параметров
 
-Проблема
-Мы получаем несколько значений из объекта, а затем передаем их в метод как параметры.
+#Проблема
+#Мы получаем несколько значений из объекта, а затем передаем их в метод как параметры.
 int low = DaysTempRange().GetLow();
 int high = DaysTempRange().GetHigh();
 bool withinPlan = plan.WithinRange(low, high);
-Решение
-Вместо этого передаем весь объект.
+#Решение
+#Вместо этого передаем весь объект.
 bool withinPlan = plan.WithinRange(DaysTempRange());
 
 
